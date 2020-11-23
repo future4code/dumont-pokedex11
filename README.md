@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Priscila Lepping
 - Pedro Lucinda
 
-Link do Surge: www.link.com.br
+Link do Surge: pokedex11-part1.surge.sh
 
 O que funciona:
 - Item 1
