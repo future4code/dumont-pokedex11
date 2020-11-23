@@ -1,0 +1,13 @@
+:root {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 10px;
+	outline: none;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	color: #1D2C5E;
+	--dark-blue: #1D2C5E;
+	--yellow: #FFCB05;
+	--blue: #307CBF;
+}
