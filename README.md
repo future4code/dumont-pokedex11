@@ -1,9 +1,9 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Ana Patricia Monteiro
+- Priscila Lepping
+- Pedro Lucinda
 
 Link do Surge: www.link.com.br
 
