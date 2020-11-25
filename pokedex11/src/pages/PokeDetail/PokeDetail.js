@@ -6,7 +6,7 @@ const PokeDetail = () => {
   return (
     <>
       <Navbar title="Pokemon" />
-      <PokeDetailContainer>
+      <PokeDetailContainer className="animateUp">
         <PokeImages>
           <Image />
           <Image />

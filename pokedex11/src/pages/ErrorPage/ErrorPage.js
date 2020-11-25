@@ -9,7 +9,7 @@ const ErrorPage = () => {
   const history = useHistory();
 
   return (
-    <ErroDiv>
+    <ErroDiv className="animateUp">
       <H1> Erro 404, por favor tente novamente </H1>
 
       <img

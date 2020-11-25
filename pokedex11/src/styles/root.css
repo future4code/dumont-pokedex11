@@ -10,4 +10,22 @@
 	--dark-blue: #1D2C5E;
 	--yellow: #FFCB05;
 	--blue: #307CBF;
+	--white: #ffffffe0;
+}
+
+@keyframes up {
+	from {
+		opacity: 0;
+		transform: translateY(16px)
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
+
+.animateUp {
+	animation-name: up;
+	animation-duration: 500ms;
+	animation-fill-mode: backwards;
 }
