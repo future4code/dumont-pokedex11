@@ -8,13 +8,8 @@ const Pokedex = () => {
   console.log(pokedex, "pokedex");
 
   function handleRemove(name) {
-    const pokemon = pokedex.filter((pokemon) => pokemon.name === name);
-    const newPokedex = [...pokedex];
-
-    newPokedex.splice(pokemon[0], 1);
+    const newPokedex = pokedex.filter((pokemon) => pokemon.name !== name);
     setPokedex(newPokedex);
-
-    console.log("removeu", newPokedex);
   }
 
   return (
@@ -27,6 +22,7 @@ const Pokedex = () => {
               key={Math.floor(Math.random() * 1000)}
               name={pokemon.name}
               onClick={() => handleRemove(pokemon.name)}
+              pokemon={pokemon}
               btnName="Remove"
               bgColor="#ffffffe0"
               color="red"
