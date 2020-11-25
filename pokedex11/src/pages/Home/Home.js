@@ -29,6 +29,7 @@ const Home = () => {
                   key={pokemon.name}
                   name={pokemon.name}
                   onClick={() => handleAddPokedex(pokemon.name)}
+                  pokemon={pokemon}
                   btnName="Adicionar"
                   url={pokemon.url}
                 />

@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { GoDetails } from "../../router/Navegation";
 import { Button } from "../styledComponents/Button";
 import { H1 } from "../Navbar/styled";
 import "./pokemonCard.css";
 import { usePokemon } from "../../hooks/usePokemon";
+import { usePokemonDetails } from "../../hooks/usePokemonDetails";
+import { PokemonDetailContext } from "../../context/PokemonDetailContext";
 
 const PokemonCard = (props) => {
-  const history = useHistory();
+  const {pokemonDetail, setPokemonDetail } = useContext(PokemonDetailContext);
 
+  const history = useHistory();
   const img = usePokemon([], props.url);
+
+  function handleDetails(pokemon) {
+    setPokemonDetail(pokemon);
+   
+    history.push("/details");
+  }
 
   return (
     <div className="pokemonCard-container">
@@ -24,7 +33,7 @@ const PokemonCard = (props) => {
         </Button>
         <Button
           style={{ background: props.bgColor, color: props.color2 }}
-          onClick={() => GoDetails(history)}
+          onClick={() => handleDetails(props.pokemon)}
         >
           Detalhes
         </Button>
