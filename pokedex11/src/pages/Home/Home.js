@@ -1,20 +1,37 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { PokemonsContext } from "../../context/PokemonsContext";
 import { PokedexContext } from "../../context/PokedexContext";
 import Navbar from "../../components/Navbar/Navbar";
 import PokemonCard from "../../components/PokemonCard/PokemonCard";
 import "./home.css";
+import Pagination from "../../components/pagination/Pagination";
 
 const Home = () => {
-  const { pokemons } = useContext(PokemonsContext);
+  const { pokemons, setPokemons } = useContext(PokemonsContext);
   const { pokedex, setPokedex } = useContext(PokedexContext);
+
+  //For the pagination
+  const [pageCurrent, setPageCurrent] = useState(1);
+  const [pokemonsPerPage] = useState(10);
+
+  //Get pokemons for each page
+  const indexOfLastBook = pageCurrent * pokemonsPerPage;
+  const indexOfFirsBook = indexOfLastBook - pokemonsPerPage;
+  const currentPokemons = pokemons && pokemons.slice(indexOfFirsBook, indexOfLastBook);
+
+  //Chage page
+  function paginate(pageNumber) {
+    setPageCurrent(pageNumber);
+  }
 
   function handleAddPokedex(name) {
     const pokemon = pokemons.filter((pokemon) => pokemon.name === name);
     const newPokedex = [...pokedex];
-
     newPokedex.push(pokemon[0]);
     setPokedex(newPokedex);
+
+    const newPokemons = pokemons.filter((pokemon) => pokemon.name !== name);
+    setPokemons(newPokemons);
   }
 
   return (
@@ -22,8 +39,8 @@ const Home = () => {
       <Navbar title="Lista de Pokemons" />
       <div className="home-container animateUp">
         <div className="pokemons">
-          {pokemons &&
-            pokemons.map((pokemon) => {
+          {currentPokemons &&
+            currentPokemons.map((pokemon) => {
               return (
                 <PokemonCard
                   key={pokemon.name}
@@ -36,6 +53,11 @@ const Home = () => {
               );
             })}
         </div>
+        <Pagination
+          pokemonsPerPage={pokemonsPerPage}
+          totalPokemons={pokemons && pokemons.length}
+          paginate={paginate}
+        />
       </div>
     </>
   );

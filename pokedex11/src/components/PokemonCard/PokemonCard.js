@@ -5,18 +5,16 @@ import { Button } from "../styledComponents/Button";
 import { H1 } from "../Navbar/styled";
 import "./pokemonCard.css";
 import { usePokemon } from "../../hooks/usePokemon";
-import { usePokemonDetails } from "../../hooks/usePokemonDetails";
 import { PokemonDetailContext } from "../../context/PokemonDetailContext";
 
 const PokemonCard = (props) => {
-  const {pokemonDetail, setPokemonDetail } = useContext(PokemonDetailContext);
+  const { setPokemonDetail } = useContext(PokemonDetailContext);
 
   const history = useHistory();
   const img = usePokemon([], props.url);
 
   function handleDetails(pokemon) {
     setPokemonDetail(pokemon);
-   
     history.push("/details");
   }
 

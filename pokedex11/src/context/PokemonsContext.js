@@ -8,7 +8,7 @@ export default function PokemonsContextProvider(props) {
 
   useEffect(() => {
     api
-      .get(`?limit=20`, undefined)
+      .get("?limit=100")
       .then((response) => setPokemons(response.data.results))
       .catch((error) => console.log(error));
   }, []);
@@ -19,5 +19,3 @@ export default function PokemonsContextProvider(props) {
     </PokemonsContext.Provider>
   );
 }
-
-
