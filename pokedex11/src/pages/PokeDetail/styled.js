@@ -4,10 +4,12 @@ export const PokeDetailContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   max-width: 1000px;
-
   margin: 30px auto;
+
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const PokeImages = styled.div`
@@ -15,31 +17,37 @@ export const PokeImages = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-	justify-content: space-between;
-	
+  justify-content: space-between;
 `;
 
 export const Image = styled.img`
   width: 300px;
   height: 300px;
-	border: 1px solid black;
-	padding: 10px;
+  padding: 10px;
+
+  background: var(--yellow);
+
+  border-radius: 10px;
 `;
 
 export const Div = styled.div`
-  height: 700px;
-	width: 300px;
-
-	min-width: 200px;
-	
-	padding: 0 10px;
-
+  height: 660px;
+  width: 260px;
+  min-width: 200px;
+  padding: 20px 20px;
   font-size: 1.6rem;
-  border: 1px solid black;
+
+  background: var(--dark-blue);
+  color: var(--yellow);
+
+  border-radius: 10px;
+
+  @media only screen and (max-width: 600px) {
+    margin: 20px 0;
+  }
 `;
 
 export const H2 = styled.h2`
-	font-size: 1.8rem;
-	font-weight: bold;
-
-`
+  font-size: 1.8rem;
+  font-weight: bold;
+`;
