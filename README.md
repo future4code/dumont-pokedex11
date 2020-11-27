@@ -13,6 +13,7 @@ O que funciona:
 - Remover Pokemon da pokedex
 - Adicionar Pokemon na pokedex
 - Visualizar detalhes do Pokemon
+- Site Responsivo
 
 
 ### Imagens
