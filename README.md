@@ -6,16 +6,20 @@ Nome dos integrantes:
 - Pedro Lucinda
 
 Link do Surge
-http://pokedex11.surge.sh/pokedex
+dumont-pokedex11.surge.sh
 
 O que funciona:
 - Paginação
-- Adicionar Pokemon na Pokedex
+- Remover Pokemon da pokedex
+- Adicionar Pokemon na pokedex
 - Visualizar detalhes do Pokemon
 
 
 ### Imagens
 
-![Screenshot 2020-11-26 162604](https://user-images.githubusercontent.com/69584272/100386597-96075f00-3004-11eb-9868-6b540c8eb6a9.png)
-![Screenshot 2020-11-26 162754](https://user-images.githubusercontent.com/69584272/100386599-97388c00-3004-11eb-99cf-f4e9560d27e6.png)
+![image](https://user-images.githubusercontent.com/63005508/100436804-9c3a2180-307e-11eb-8e21-85935e9452cd.png)
+![image](https://user-images.githubusercontent.com/63005508/100436830-a8be7a00-307e-11eb-968e-6badde19a216.png)
+![image](https://user-images.githubusercontent.com/63005508/100436861-b3790f00-307e-11eb-8303-f8977907967a.png)
+![image](https://user-images.githubusercontent.com/63005508/100436899-c390ee80-307e-11eb-96e3-4715e0148541.png)
+![image](https://user-images.githubusercontent.com/63005508/100436933-d1467400-307e-11eb-85ca-890c5a49272c.png)
 
